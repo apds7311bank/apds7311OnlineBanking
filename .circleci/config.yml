@@ -3,16 +3,18 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'cimg/python:3.8'  # Keep your original Docker image for Python 3.8 (adjust as needed)
+      - image: 'cimg/python:3.8'  # If you still need Python, you can use this image
     steps:
       - checkout  # This checks out your code from GitHub
       - run:
+          name: Install Node.js and npm
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_16.x | bash -  # Setup Node.js 16 (or use another version)
+            sudo apt-get install -y nodejs
+      - run:
           name: Install dependencies and build project
           command: |
-            # If you're using Python, make sure you're installing dependencies
-            # Adjust as per your project needs
-            echo "Installing dependencies"
-             npm install # Assuming you're using a requirements file for Python dependencies
+            npm install  # Install the npm dependencies
       - sonarcloud/scan  # This step triggers the SonarCloud analysis
 
 orbs:
@@ -22,5 +24,5 @@ workflows:
   main:
     jobs:
       - build:
-          context: SonarCloud
-  # You can define additional contexts if needed
+          context: SonarCloud  # You can define additional contexts if needed
+
