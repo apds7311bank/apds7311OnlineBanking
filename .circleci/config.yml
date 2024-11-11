@@ -6,25 +6,24 @@ orbs:
 jobs:
   build-and-analyze:
     docker:
-      - image: cimg/node:18.0  # Node.js for frontend
-      - image: cimg/openjdk:17.0  # Java for backend
+      - image: cimg/openjdk:17.0  # Using Java 17 for backend
+
     steps:
       - checkout  # Check out code
 
-      # Install dependencies for Node.js frontend
-      - run:
-          name: Install Node.js dependencies
-          command: |
-            cd frontend  # Change this to your frontend directory if needed
-            npm install
-
-
-      # Build Java backend if necessary
+      # Build Java backend
       - run:
           name: Build Java backend
           command: |
-            cd backend  # Change this to your backend directory if needed
             ./mvnw clean install
+
+      # Run SonarCloud analysis
+      - sonarcloud/scan
+
+workflows:
+  build-and-scan:
+    jobs:
+      - build-and-analyze
 
       # Run SonarCloud analysis
       - sonarcloud/scan
