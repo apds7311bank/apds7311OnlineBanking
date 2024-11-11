@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Build Java backend
           command: |
-            cd apds7311OnlineBanking/BACKEND  # Change this to your backend directory if needed
+            cd BACKEND  # Change this to your backend directory if needed
             ./mvnw clean install
 
       # Run SonarCloud analysis
