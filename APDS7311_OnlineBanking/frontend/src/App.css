@@ -1,0 +1,89 @@
+/* Apply the background to the body of the app */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('./Assets/BackgroundPay.jpg'); /* Apply the image */
+  background-size: cover;  /* Ensure the image covers the entire screen */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat;  /* Prevent repeating the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Ensure positioning context for overlay */
+}
+
+/* Overlay for better text visibility */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 0; /* Ensure it is behind the content */
+}
+
+/* Apply any additional styles for the content (your App component) */
+.App {
+  z-index: 1; /* Ensure the content stays on top of the background */
+  width: 100%;
+  max-width: 1200px; /* Optional: Adjust width for a better layout */
+  color: white; /* Change text color to make it visible over the background */
+}
+
+h1 {
+  color: white; /* Change text color to make it visible over the background */
+  margin-bottom: 20px;
+}
+
+.ag-theme-alpine {
+  background-color: white;  /* Keeps grid background white */
+}
+
+p {
+  color: white; /* Ensure paragraph text is visible */
+}
+.verify-button {
+  position: relative; /* Ensure it can use z-index */
+  z-index: 1; /* Higher than the overlay */
+}
+body::before {
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

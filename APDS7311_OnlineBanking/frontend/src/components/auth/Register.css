@@ -1,0 +1,149 @@
+*  
+  Styles for the wrapper element  
+  - Sets the width, background, border, and box shadow for the wrapper  
+  - Also sets the color, border radius, and padding for the wrapper  
+*/  
+.wrapper {  
+  width: 420px;  
+  background: transparent;  
+  border: 2px solid rgba(255, 255, 255, .2);  
+  backdrop-filter: blur(30px);  
+  box-shadow: 0 0 10px rgba(255, 255, 255, .2);  
+  color: #fff;  
+  border-radius: 10px;  
+  padding: 30px 40px;  
+}  
+  
+/*  
+  Styles for the h1 element inside the wrapper  
+  - Sets the font size and text alignment for the h1 element  
+*/  
+.wrapper h1 {  
+  font-size: 36px;  
+  text-align: center;  
+}  
+  
+/*  
+  Styles for the input box element  
+  - Sets the position, width, height, background, and margin for the input box  
+*/  
+.wrapper .input-box {  
+  position: relative;  
+  width: 100%;  
+  height: 50px;  
+  background: transparent;  
+  margin: 30px 0;  
+}  
+  
+/*  
+  Styles for the input element inside the input box  
+  - Sets the width, height, background, outline, border, border radius, font size, and color for the input element  
+  - Also sets the padding for the input element  
+*/  
+.input-box input {  
+  width: 100%;  
+  height: 100%;  
+  background: transparent;  
+  outline: none;  
+  border: 2px solid rgba(255,255,255, .2);  
+  border-radius: 40px;  
+  font-size: 16px;  
+  color: #fff;  
+  padding: 20px 45px 20px 20px;  
+}  
+  
+/*  
+  Styles for the placeholder text inside the input element  
+  - Sets the color for the placeholder text  
+*/  
+.input-box input::placeholder {  
+  color: #fff;  
+}  
+  
+/*  
+  Styles for the icon element inside the input box  
+  - Sets the position, right margin, top margin, and font size for the icon element  
+  - Also sets the transform property to center the icon vertically  
+*/  
+.input-box .icon {  
+  position: absolute;  
+  right: 20px;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  font-size: 16px;  
+}  
+  
+/*  
+  Styles for the remember and forgot password section  
+  - Sets the display, justify content, font size, and margin for the remember and forgot password section  
+*/  
+.wrapper .remember-forgot {  
+  display: flex;  
+  justify-content: space-between;  
+  font-size: 14.5px;  
+  margin: -15px 0 15px;  
+}  
+  
+/*  
+  Styles for the label and input elements inside the remember and forgot password section  
+  - Sets the accent color and margin right for the label and input elements  
+*/  
+.remember-forgot label input {  
+  accent-color: #fff;  
+  margin-right: 4px;  
+}  
+  
+/*  
+  Styles for the anchor element inside the remember and forgot password section  
+  - Sets the color, text decoration, and hover effect for the anchor element  
+*/  
+.remember-forgot a {  
+  color: #fff;  
+  text-decoration: none;  
+}  
+  
+.remember-forgot a:hover {  
+  text-decoration: underline;  
+}  
+  
+/*  
+  Styles for the button element  
+  - Sets the width, height, background, border, outline, border radius, box shadow, cursor, font size, color, and font weight for the button element  
+*/  
+.wrapper button {  
+  width: 100%;  
+  height: 45px;  
+  background: #fff;  
+  border: none;  
+  outline: none;  
+  border-radius: 40px;  
+  box-shadow: 0 0 10px rgba(0,0,0, .1);  
+  cursor: pointer;  
+  font-size: 16px;  
+  color: #333;  
+  font-weight: 700;  
+}  
+  
+/*  
+  Styles for the login link section  
+  - Sets the font size, text alignment, and margin for the login link section  
+*/  
+.wrapper .login-link {  
+  font-size: 14.5px;  
+  text-align: center;  
+  margin: 20px 0 15px;  
+}  
+  
+/*  
+  Styles for the anchor element inside the login link section  
+  - Sets the color, text decoration, and hover effect for the anchor element  
+*/  
+.login-link p a {  
+  color: #fff;  
+  text-decoration: none;  
+  font-weight: 600;  
+}  
+  
+.login-link p a:hover {  
+  text-decoration: underline;  
+}

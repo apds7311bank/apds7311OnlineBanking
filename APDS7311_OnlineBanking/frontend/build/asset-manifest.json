@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.297da3af.css",
+    "main.js": "/static/js/main.07ae4431.js",
+    "static/media/BackgroundPay.jpg": "/static/media/BackgroundPay.de34774593850aaccd9e.jpg",
+    "index.html": "/index.html",
+    "main.297da3af.css.map": "/static/css/main.297da3af.css.map",
+    "main.07ae4431.js.map": "/static/js/main.07ae4431.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.297da3af.css",
+    "static/js/main.07ae4431.js"
+  ]
+}

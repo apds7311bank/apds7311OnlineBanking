@@ -1,0 +1,21 @@
+/* tablecustom.css */
+
+.add-payment-button {
+    background-color: #5f7cc3; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    outline: none;
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block display */
+    font-size: 16px; /* Larger text */
+    margin-top: 20px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-payment-button:hover {
+    background-color: #042e31; /* Darker green on hover */
+}

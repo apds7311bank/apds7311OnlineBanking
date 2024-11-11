@@ -1,0 +1,118 @@
+
+
+/*
+ * This code is adapted from the YouTube tutorial "Login form in React JS" by CodeHal.
+ * Available at: https://www.youtube.com/watch?v=kghwFYOJiNg
+ */
+
+
+.wrapper{
+    /* Wrapper container that holds the entire login form */
+    width: 420px;  /* Width of the container */
+    background: transparent;  /* Transparent background for modern effect */
+    border: 2px solid rgba(255, 255, 255, .2);  /* Slightly transparent white border */
+    backdrop-filter: blur(30px);  /* Adds a blur effect to the background content */
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);  /* Soft white shadow for depth */
+    color: #fff;  /* Text color is white */
+    border-radius: 10px;  /* Slightly rounded corners */
+    padding: 30px 40px;  /* Padding inside the wrapper */
+}
+.wrapper h1{
+    /* Styling for the heading (Login title) */
+    font-size: 36px;  /* Large font size */
+    text-align: center;  /* Center the text horizontally */
+}
+
+.wrapper .input-box {
+    /* Each input box container */
+    position: relative;  /* Allows positioning of the icon */
+    width: 100%;  /* Full width of the wrapper */
+    height: 50px;  /* Height of the input boxes */
+    background: transparent;  /* Transparent background */
+    margin: 30px 0;  /* Space around the input boxes */
+}
+
+.input-box input {
+    /* Styling for the actual input fields (Username, Account Number, Password) */
+    width: 100%;  /* Full width of the input box */
+    height: 100%;  /* Full height of the input box */
+    background: transparent;  /* Transparent background */
+    outline: none;  /* Remove default outline on focus */
+    border: 2px solid rgba(255,255,255, .2);  /* Transparent white border */
+    border-radius: 40px;  /* Rounded corners for the input */
+    font-size: 16px;  /* Font size of input text */
+    color: #fff;  /* Text color is white */
+    padding: 20px 45px 20px 20px;  /* Padding inside the input field, extra space for icon */
+}
+
+.input-box input::placeholder{
+    /* Styling for placeholder text (e.g., 'Username', 'Password') */
+    color: #fff;  /* White text for placeholders */
+}
+
+.input-box .icon {
+    /* Styling for the icons inside the input fields */
+    position: absolute;  /* Positioned relative to the input box */
+    right: 20px;  /* Positioned 20px from the right edge */
+    top: 50%;  /* Center vertically inside the input */
+    transform: translateY(-50%);  /* Adjusts for proper vertical alignment */
+    font-size: 16px;  /* Icon size */
+}
+
+.wrapper .remember-forgot{
+    /* Container for the "Remember me" checkbox and "Forgot Password" link */
+    display: flex;  /* Flexbox layout for horizontal alignment */
+    justify-content: space-between;  /* Spreads out items to the left and right */
+    font-size: 14.5px;  /* Font size of the text */
+    margin: -15px 0 15px;  /* Vertical margins, negative top margin for closer alignment */
+}
+
+.remember-forgot label input{
+    /* Styling for the checkbox inside the "Remember me" label */
+    accent-color: #fff;  /* White color for the checkbox */
+    margin-right: 4px;  /* Space between the checkbox and text */
+}
+
+.remember-forgot a{
+    /* Styling for the "Forgot Password" link */
+    color: #fff;  /* White text */
+    text-decoration: none;  /* Remove underline by default */
+}
+
+.remember-forgot a:hover{
+    /* Styling for the "Forgot Password" link on hover */
+    text-decoration: underline;  /* Underline on hover */
+}
+
+.wrapper button{
+    /* Styling for the login button */
+    width: 100%;  /* Full width of the wrapper */
+    height: 45px;  /* Button height */
+    background: #fff;  /* White background */
+    border: none;  /* No border */
+    outline: none;  /* Remove default outline */
+    border-radius: 40px;  /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0, .1);  /* Light shadow for depth */
+    cursor: pointer;  /* Cursor changes to pointer on hover */
+    font-size: 16px;  /* Button text font size */
+    color: #333;  /* Dark color for the text */
+    font-weight: 700;  /* Bold text */
+}
+
+.wrapper .register-link{
+    /* Container for the "Register" link text */
+    font-size: 14.5px;  /* Font size */
+    text-align: center;  /* Center align the text */
+    margin: 20px 0 15px;  /* Margins around the register link */
+}
+
+.register-link p a {
+    /* Styling for the "Register" link */
+    color: #fff;  /* White text */
+    text-decoration: none;  /* No underline */
+    font-weight: 600;  /* Slightly bold */
+}
+.register-link p a:hover {
+    /* Styling for the "Register" link on hover */
+    text-decoration: underline;  /* Underline on hover */
+}
