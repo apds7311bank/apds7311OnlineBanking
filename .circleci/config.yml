@@ -3,14 +3,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'cimg/python:3.8'  # If you still need Python, you can use this image
+      - image: 'cimg/node:16'  # Use a Node.js image instead of the Python one
     steps:
       - checkout  # This checks out your code from GitHub
-      - run:
-          name: Install Node.js and npm
-          command: |
-            curl -fsSL https://deb.nodesource.com/setup_16.x | bash -  # Setup Node.js 16 (or use another version)
-            sudo apt-get install -y nodejs
       - run:
           name: Install dependencies and build project
           command: |
