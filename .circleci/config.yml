@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'cimg/openjdk:17-jdk'  # Replace with the appropriate Docker image for your project
+      - image: 'cimg/python:3.8'  # Replace with the appropriate Docker image for your project
     steps:
       - checkout  # This checks out your code from GitHub
       - run:
