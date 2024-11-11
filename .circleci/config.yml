@@ -3,22 +3,17 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'cimg/python:3.8'  # Replace with the appropriate Docker image for your project
+      - image: 'cimg/python:3.8'  # Keep your original Docker image for Python 3.8 (adjust as needed)
     steps:
       - checkout  # This checks out your code from GitHub
       - run:
           name: Install dependencies and build project
           command: |
-            # Replace this with your actual build commands
-            # For example:
-            # sudo apt-get update
-            # sudo apt-get install -y build-essential
-            # or any specific commands that prepare your project for analysis
-            echo "Building the project"
-      - sonarcloud/scan:
-          sonarcloud_token: $SONAR_TOKEN  # This uses the SonarCloud token from CircleCI environment variables
-          project_key: "apds7311bank_apds7311OnlineBanking"   # Replace with your actual SonarCloud project key
-          organization: "apds7311bank"  # Replace with your actual SonarCloud organization key
+            # If you're using Python, make sure you're installing dependencies
+            # Adjust as per your project needs
+            echo "Installing dependencies"
+            pip install -r requirements.txt  # Assuming you're using a requirements file for Python dependencies
+      - sonarcloud/scan  # This step triggers the SonarCloud analysis
 
 orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0  # This is the orb that integrates SonarCloud into CircleCI
@@ -27,4 +22,5 @@ workflows:
   main:
     jobs:
       - build:
-          context: SonarCloud  # You can define additional contexts if needed
+          context: SonarCloud
+  # You can define additional contexts if needed
