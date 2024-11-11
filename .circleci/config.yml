@@ -5,24 +5,26 @@ jobs:
     docker:
       - image: 'cimg/python:3.8'  # Replace with the appropriate Docker image for your project
     steps:
-      - checkout
+      - checkout  # This checks out your code from GitHub
       - run:
           name: Install dependencies and build project
-          command: ./gradlew build  # Modify this to your build command
-      - run:
-          name: Run SonarScanner
           command: |
-            sonar-scanner \
-              -Dsonar.projectKey=mybank_onlinebanking \
-              -Dsonar.organization=mybankorg \
-              -Dsonar.sources=.
+            # Replace this with your actual build commands
+            # For example:
+            # sudo apt-get update
+            # sudo apt-get install -y build-essential
+            # or any specific commands that prepare your project for analysis
+            echo "Building the project"
+      - sonarcloud/scan:
+          sonarcloud_token: $SONAR_TOKEN  # This uses the SonarCloud token from CircleCI environment variables
+          project_key: "apds7311bank_apds7311OnlineBanking"   # Replace with your actual SonarCloud project key
+          organization: "apds7311bank"  # Replace with your actual SonarCloud organization key
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@2.0.0
+  sonarcloud: sonarsource/sonarcloud@2.0.0  # This is the orb that integrates SonarCloud into CircleCI
 
 workflows:
   main:
     jobs:
       - build:
-          context: SonarCloud
-           # You can define additional contexts if needed
+          context: SonarCloud  # You can define additional contexts if needed
