@@ -17,9 +17,18 @@ jobs:
           command: |
             cd BACKEND  # Change this to your backend directory if needed
             npm install
+      
+      - run:
+          name: Install dependencies
+          command: |
+            cd apds7311OnlineBanking/BACKEND
+            npm install
 
       # Run SonarCloud analysis
-      - sonarcloud/scan
+        - sonarcloud/scan:
+          sonar_token: ${SONAR_TOKEN}
+          project_key: "apds7311bank_apds7311OnlineBanking"
+          organization: "apds7311bank"
 
 workflows:
   build-and-scan:
