@@ -12,7 +12,7 @@ jobs:
             # If you're using Python, make sure you're installing dependencies
             # Adjust as per your project needs
             echo "Installing dependencies"
-            pip install -r requirements.txt  # Assuming you're using a requirements file for Python dependencies
+             npm install # Assuming you're using a requirements file for Python dependencies
       - sonarcloud/scan  # This step triggers the SonarCloud analysis
 
 orbs:
